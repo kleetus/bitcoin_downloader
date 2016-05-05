@@ -1,0 +1,23 @@
+{
+  "name": "bitcoin-downloader",
+  "productName": "Bitcoin Downloader",
+  "description": "Downloads Bitcoin, verifies the hash of the binary, checks the signatures, and shows the gitian build information",
+  "version": "0.1.0",
+  "author": "Chris Kleeschulte",
+  "copyright": "© 2016, BitPay, Inc.",
+  "main": "background.js",
+  "dependencies": {
+    "fs-jetpack": "^0.7.0"
+  },
+  "packageNameTemplate": "{{name}}-v{{version}}-{{platform}}-{{arch}}",
+  "osx": {
+    "build": "1",
+    "identifier": "com.bitpay.bitcoin_downloader",
+    "LSApplicationCategoryType": "public.app-category.productivity",
+    "//codeSignIdentitiy": {
+      "dmg": "Developer ID Application: BitPay (APPIDENTITY)",
+      "MAS": "3rd Party Mac Developer Application: BitPay (APPIDENTITY)",
+      "MASInstaller": "3rd Party Mac Developer Installer: BitPay (APPIDENTITY)"
+    }
+  }
+}
